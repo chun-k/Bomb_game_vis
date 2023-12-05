@@ -2,7 +2,7 @@ import random as rd
 import time as tm
 import os
 
-from dot.dot_pic import *
+from bomb_pkg.dot_pic import *
 
 # ---------- 클래스 정의 ----------
 class Bomb_game:
