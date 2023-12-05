@@ -132,7 +132,7 @@ class Bomb_game:
             self.frynum -= 1
         return card
 
-    def pri_board(self, card):
+    def pri_board(self, card, main_board):
         '''
         카드를 뽑거나 사용하였을 때, 이 메소드를 호출하여 메인보드를 출력한다.
         '''
