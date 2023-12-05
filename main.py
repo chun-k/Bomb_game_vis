@@ -206,7 +206,7 @@ while True :
                                         else :
                                             break
 
-                                    now_turn.steal(*list(filter(lambda x : x.name == stolen, plyer_list[1:])))
+                                    now_turn.steal(*list(filter(lambda x : x.name == stolen, plyer_list[1:])), main_board)
                                     tm.sleep(3)
 
                             elif use_card == '스킵' :
