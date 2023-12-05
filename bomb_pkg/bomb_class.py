@@ -2,6 +2,8 @@ import random as rd
 import time as tm
 import os
 
+from dot_pic import *
+
 # ---------- 클래스 정의 ----------
 class Bomb_game:
     '''2-4인용 폭탄게임을 하기 위한 여러가지 기능(메소드)을 제공하는 클래스이다.'''
