@@ -1,3 +1,5 @@
+https://github.com/chun-k/Bomb_game_vis
+
 ## Bomb-Game
 # Main Game start
 # **게임 시작 전**
