@@ -2,9 +2,9 @@ import random as rd
 import time as tm
 import os
 
-from bomb_class import *
-from dot_pic import *
-from excep_func import *
+from bomb_pkg.bomb_class import *
+from bomb_pkg.dot_pic import *
+from bomb_pkg.excep_func import *
 
 print('플레이하는 환경이 Window 인가요 Mac 인가요?')
 print("Window 면 'W' 를, Mac 이면 'M' 을 입력해주세요")
