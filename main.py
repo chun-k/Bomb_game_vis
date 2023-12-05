@@ -19,6 +19,8 @@ if MW in 'Ww' :
 elif MW in 'Mm' :
     Cl = 'clear' # Mac
 
+Bomb_game.mw = Cl
+
 
 while True :
     # ---------- 시작 세팅 ----------
