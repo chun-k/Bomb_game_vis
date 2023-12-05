@@ -189,7 +189,7 @@ class Bomb_game:
                     print()
                 print('입니다 (5초 후 사라집니다)')
         tm.sleep(5)
-        os.system(Cl)
+        os.system(Bomb_game.mw)
 
     def steal(self, oppo):
         '''
@@ -199,19 +199,19 @@ class Bomb_game:
         print(f'상대의 카드 목록은 {oppo.hav_card} 입니다')
         print(f'어떤 카드를 줄 지 {oppo} 님이 선택해주세요')
         give_card = input()
-        os.system(Cl)
+        os.system(Bomb_game.mw)
         self.pri_board('강탈')
 
         while give_card not in oppo.hav_card :
             print('가지고 있는 카드 중에서 선택해주세요')
             print(f'카드 목록은 {oppo.hav_card} 입니다')
             give_card = input()
-            os.system(Cl)
+            os.system(Bomb_game.mw)
             self.pri_board('강탈')
 
         oppo.hav_card.remove(give_card)
         self.hav_card.append(give_card)
-        os.system(Cl)
+        os.system(Bomb_game.mw)
         oppo.pri_board(give_card)
         print(f'{oppo} 님에게서 {give_card} 카드를 빼앗았습니다!')
 
@@ -274,14 +274,14 @@ class Bomb_game:
             print(i)
             tm.sleep(1)
 
-        os.system(Cl)
+        os.system(Bomb_game.mw)
         print(boom1)
         tm.sleep(1)
 
-        os.system(Cl)
+        os.system(Bomb_game.mw)
         print(boom2)
         tm.sleep(1)
 
-        os.system(Cl)
+        os.system(Bomb_game.mw)
         print(boom3)
         self.alive = False
