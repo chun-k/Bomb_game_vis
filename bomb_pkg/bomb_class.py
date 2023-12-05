@@ -191,7 +191,7 @@ class Bomb_game:
         tm.sleep(5)
         os.system(Bomb_game.mw)
 
-    def steal(self, oppo):
+    def steal(self, oppo, board):
         '''
         상대의 카드 하나를 뺏어온다. (뺏어올 카드는 상대가 정한다.)
         '''
@@ -200,19 +200,19 @@ class Bomb_game:
         print(f'어떤 카드를 줄 지 {oppo} 님이 선택해주세요')
         give_card = input()
         os.system(Bomb_game.mw)
-        self.pri_board('강탈')
+        self.pri_board('강탈', board)
 
         while give_card not in oppo.hav_card :
             print('가지고 있는 카드 중에서 선택해주세요')
             print(f'카드 목록은 {oppo.hav_card} 입니다')
             give_card = input()
             os.system(Bomb_game.mw)
-            self.pri_board('강탈')
+            self.pri_board('강탈', board)
 
         oppo.hav_card.remove(give_card)
         self.hav_card.append(give_card)
         os.system(Bomb_game.mw)
-        oppo.pri_board(give_card)
+        oppo.pri_board(give_card, board)
         print(f'{oppo} 님에게서 {give_card} 카드를 빼앗았습니다!')
 
     def skip(self):
