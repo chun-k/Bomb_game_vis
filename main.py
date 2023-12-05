@@ -171,7 +171,7 @@ while True :
                             continue
                         else :
                             os.system(Cl)
-                            now_turn.pri_board(use_card)
+                            now_turn.pri_board(use_card, main_board)
                             print(f'{use_card} 카드를 사용합니다')
                             tm.sleep(2)
                             if use_card == '셔플' :
@@ -189,13 +189,13 @@ while True :
                                         print('누구의 카드를 빼앗을 지 선택하세요')
                                         stolen = input()
                                         os.system(Cl)
-                                        now_turn.pri_board('강탈')
+                                        now_turn.pri_board('강탈', main_board)
 
                                         while stolen not in list(map(lambda x : x.name, plyer_list[1:])) :
                                             print(f'{list(map(lambda x : x.name, plyer_list[1:]))} 중에서 골라주세요')
                                             stolen = input()
                                             os.system(Cl)
-                                            now_turn.pri_board('강탈')
+                                            now_turn.pri_board('강탈', main_board)
 
                                         if list(filter(lambda x : x.name == stolen, plyer_list[1:]))[0].hav_card == [] :
                                             print(f'{stolen} 님은 가지고 있는 카드가 없습니다')
@@ -214,7 +214,7 @@ while True :
                             elif use_card == '밑장빼기' :
                                 os.system(Cl)
                                 card = now_turn.underdraw()
-                                now_turn.pri_board(card)
+                                now_turn.pri_board(card, main_board)
                                 print(f'{card} 카드를 뽑으셨습니다!')
                                 tm.sleep(3)
 
@@ -256,7 +256,7 @@ while True :
             if draw_use == '0' :
                 card = now_turn.draw_card()
                 os.system(Cl)
-                now_turn.pri_board(card)
+                now_turn.pri_board(card, main_board)
                 print(f'{card} 카드를 뽑으셨습니다!')
                 tm.sleep(3)
 
@@ -265,7 +265,7 @@ while True :
                     now_turn.frynum = 0
                     if '제거' in now_turn.hav_card :
                         os.system(Cl)
-                        now_turn.pri_board('제거')
+                        now_turn.pri_board('제거', main_board)
                         now_turn.remove()
                         tm.sleep(2)
                         os.system(Cl)
